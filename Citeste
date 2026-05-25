@@ -1,0 +1,42 @@
+# 📱 One UI AOSP - Custom Reskin Project
+
+Un proiect personal de modificare vizuală (Reskin/Remix) bazat pe un sistem stabil AOSP, transformat complet pentru a oferi experiența vizuală și estetică din **Samsung One UI 8**.
+
+---
+
+## 🚀 Caracteristici principale (Features)
+* 🧠 **Bază fluidă**: Construit deasupra motorului ultra-rapid InfinityX / EvolutionX (Android 15-16).
+* 🎨 **Interfață One UI**: Integrează un Launcher portat cu iconițe, widget-uri și sertar de aplicații în stil Samsung.
+* ⚙️ **Identitate Personalizată**: Fișierul `build.prop` a fost modificat pentru a afișa oficial numele **"One UI 8"** în secțiunea *Despre telefon*.
+* 🎬 **Bootanimation**: Animație de pornire minimalistă cu logo-ul original Samsung la rezoluție Full HD (1080p).
+
+---
+
+## 📱 Dispozitiv Țintă (Target Device)
+* **Model**: Xiaomi Redmi 9T (Nume de cod: `lime`)
+* **Procesor**: Snapdragon 662
+* **Arhitectură GSI**: ARM64 (Binder64)
+
+---
+
+## 🛠️ Cum se instalează (Installation Guide)
+
+> ⚠️ **Avertisment**: Ai nevoie de un bootloader deblocat și de un recovery custom (TWRP/OrangeFox) sau Fastboot configurat pe PC.
+
+### Prin modul Fastboot (Recomandat)
+1. Repornește telefonul în modul Fastboot și conectează-l la PC.
+2. Deschide terminalul (CMD) în folderul cu uneltele Fastboot și rulează:
+```bash
+fastboot reboot fastboot
+fastboot flash system system.img
+fastboot -w
+fastboot reboot
+```
+
+---
+
+## 👨‍💻 Credite și Mulțumiri (Credits)
+* **Google** pentru AOSP (Android Open Source Project).
+* **Phhusson** pentru patch-urile universale Project Treble (GSI).
+* Comunității **InfinityX / EvolutionX** pentru codul de bază stabil.
+* Dezvoltatorilor independenți pentru portarea elementelor grafice One UI.
