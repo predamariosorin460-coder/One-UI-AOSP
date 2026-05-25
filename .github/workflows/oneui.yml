@@ -1,0 +1,27 @@
+name: Compilare One UI 8
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descarcă proiectul tău
+        uses: actions/checkout@v4
+
+      - name: Descarcă baza de Android
+        run: |
+          wget https://github.com
+          xz -d lineage-21.0-20240420-UNOFFICIAL-treble_arm64_bvN.img.xz
+          mv lineage-21.0-20240420-UNOFFICIAL-treble_arm64_bvN.img system.img
+
+      - name: Execută transformarea One UI
+        run: |
+          chmod +x build_unified.sh
+          ./build_unified.sh
+
+      - name: Salvează GSI-ul tău modificat
+        uses: actions/upload-artifact@v4
+        with:
+          name: OneUI-8-Redmi9T
+          path: system.img
