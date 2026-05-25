@@ -9,11 +9,16 @@ jobs:
       - name: Descarcă proiectul tău
         uses: actions/checkout@v4
 
-      - name: Descarcă baza de Android
+      - name: Descarcă baza de Android (Link Reparat)
         run: |
-          wget https://github.com
-          xz -d lineage-21.0-20240420-UNOFFICIAL-treble_arm64_bvN.img.xz
-          mv lineage-21.0-20240420-UNOFFICIAL-treble_arm64_bvN.img system.img
+          # Descarcă o bază stabilă de LineageOS 21 AOSP direct de pe serverele de mirror
+          wget -O system.img.xz "https://sourceforge.net"
+          
+          # Dezarhivează fișierul
+          xz -d system.img.xz
+          
+          # Verifică dacă fișierul system.img s-a generat corect
+          ls -l system.img
 
       - name: Execută transformarea One UI
         run: |
